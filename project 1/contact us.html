@@ -1,0 +1,33 @@
+
+<html>
+    <body>
+          <link rel="stylesheet" href="contact.css">
+<form onsubmit="sendEmail(); ">
+<div class="container">
+    <input type="text" id="name" placeholder="your name" required>
+    <input type="email" id="name" placeholder="your phone no." required>
+    <input type="text" id="name" placeholder="your email" required>
+    <input type="message" id="name" placeholder="your enquiry" required>
+    <button type="submit"> Send</button>
+    </form>
+    </div>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+    function sendEmail(){
+        Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "s.dayanand10679s1@kvofa.in",
+    Password : "password",
+    To : 's.dayanand10679s1@kvofa.in',
+    From : document.getElementById("email").value,
+    Subject : "new contact form enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
+    }
+        </script>
+            
+    </body>
+    
+</html>
